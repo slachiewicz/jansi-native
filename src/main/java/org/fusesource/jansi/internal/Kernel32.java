@@ -84,7 +84,11 @@ public class Kernel32 {
     public static int STD_ERROR_HANDLE;
     @JniField(flags={CONSTANT})
     public static int INVALID_HANDLE_VALUE;
-    
+
+    /**
+     * see https://docs.microsoft.com/en-us/windows/console/setconsolemode
+     */
+    public static int ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004;
 
     @JniMethod(cast="void *")
     public static final native long malloc(
